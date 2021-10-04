@@ -1,0 +1,54 @@
+body {font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(80, 79, 79);
+}
+
+#general {
+    float:right;
+    width: 88%;
+    height: 600px;
+    background-color: rgb(212, 208, 208);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 60px);
+}
+
+.have {
+    width: 95%;
+    grid-column: 1/6;
+    border-radius: 10px;
+    background-color: gray;
+    padding: 10px 20px;
+    margin: 10px 10px;
+}
+.first {
+    width: 95%;
+    color: tomato;
+    font-size: x-large;
+    border-bottom: 1px solid Tomato;
+    grid-column: 1/6;
+    padding: 10px 20px;
+    margin: 10px 10px 0px 20px;
+}
+.second {
+    width: 250px;
+    justify-content: space-around;
+    flex-direction: row;
+    color: tomato;
+    padding: 0px 20px ;
+    margin: 50px 0px 0px 30px;
+    text-align: center;
+}
+.inter {
+    width: 250px;
+    display: inline-block;
+    color: tomato;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    border-right: 1px solid tomato;
+    text-align: center;
+}
+.head {
+    width: 100%;
+    display: flex;
+}
