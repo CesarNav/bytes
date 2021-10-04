@@ -1,0 +1,73 @@
+//@use "./commons/Colors" as *;
+$primaryColor: #fefbf3;
+$elementColor: #fb9300;
+
+.CanvasSales {
+  width: 1700px;
+  height: 1080px;
+
+  .SalesMenuHeader {
+    background-color: transparent;
+    border-bottom: 2px solid $elementColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+      color: $elementColor;
+      font-size: 45px;
+    }
+
+    .ButtonContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $elementColor;
+
+      .ButtonAdd {
+        border: none;
+        margin: 0 0 0 10px;
+        background-color: $elementColor;
+        font-size: 22.5px;
+        border-radius: 5px;
+        color: $primaryColor;
+        cursor: pointer;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .SalesContMain {
+    height: 100%;
+    margin: 0 10px 40px 10px;
+    padding: 40px 10px 40px 10px;
+
+    .BarHeader {
+      background-color: $primaryColor;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      font-size: 25px;
+      color: $elementColor;
+    }
+
+    .SearchContainer {
+      background-color: $primaryColor;
+      display: inline-block;
+      color: $elementColor;
+      align-self: center;
+
+      input {
+        background-color: $primaryColor;
+        padding: 5px;
+        border: 2px solid $elementColor;
+        border-radius: 20px;
+      }
+    }
+  }
+}
