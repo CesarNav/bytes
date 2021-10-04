@@ -1,0 +1,42 @@
+body {
+  background-color: #535353;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefbf3f2;
+  border-radius: 27px;
+}
+.loginContainer__label {
+  margin-top: 20px;
+}
+
+.loginContainer input {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+.loginContainer_buttonIngresar {
+  background-color: #df7861;
+  width: 50%;
+  margin: 30px;
+  border-radius: 27px;
+  padding: 5px;
+  border-color: #df7861;
+}
+
+h6 {
+  color: #df7861;
+}
+.loginContainer__googleLogin {
+  background-image: url(/src/commons/google_logo.png);
+}

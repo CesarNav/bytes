@@ -6,13 +6,37 @@ import Input from "./components/input/input";
 
 const Login = () => {
     return (
-        <div className = 'loginContainer'>
+        <body>
+            <div className = 'loginContainer'>
             <Title text='Ventas'/>
             <Label text='Usuario'/>
-            <Input />
+            <Input 
+            attribute= {{
+                id: 'usuario',
+                type: 'text',
+                placeholder: 'Ingrese su usuario',
+            }}
+            />
             <Label text='Contraseña'/>
-            <Input type='password' />
-        </div>
+            <Input 
+            attribute= {{
+                id: 'contrasena',
+                type: 'password',
+                placeholder: 'Ingrese su contraseña',
+            }}
+            />
+            <button className= 'loginContainer_buttonIngresar'>
+                Ingresar
+            </button>
+            <h6>Olvide mi contraseña</h6>
+            <button className="loginContainer_googleLogin">
+                <figure>
+                    <img src="/src/commons/google_logo.png" alt="Google logo"></img>
+                </figure>
+            </button>
+            </div>
+        </body>
+        
     )
 };
 
