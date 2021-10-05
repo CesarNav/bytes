@@ -6,22 +6,38 @@ import "./SideBar.scss";
 
 export function SideBar() {
   return (
-    <div className="SideBarContainer">
-      <div className="LogoContainer">
-        <SiShopware size="7em" />
-      </div>
-      <div className="ButtonContainer">
-        <TiTags size="3em" />
-        <button className="button">Ventas</button>
-      </div>
-      <div className="ButtonContainer">
-        <BiCube size="3em" />
-        <button className="button">Productos</button>
-      </div>
-      <div className="ButtonContainer">
-        <BiUser size="3em" />
-        <button className="button">Usuarios</button>
-      </div>
+    <div className="Canvas">
+      <header className="Header"></header>
+
+      <aside className="Aside">
+        <div className="AsideContent">
+          <div className="LogoContainer">
+            <SiShopware size="8em" />
+          </div>
+          <div className="ButtonRouters">
+            <div className="ButtonContainer">
+              <TiTags className="IconRouter" size="3.5em" />
+              <button className="ButtonRouter">Ventas</button>
+            </div>
+            <div className="ButtonContainer">
+              <BiCube className="IconRouter" size="3.5em" />
+              <button className="ButtonRouter">Productos</button>
+            </div>
+            <div className="ButtonContainer">
+              <BiUser className="IconRouter" size="3.5em" />
+              <button className="ButtonRouter">Usuarios</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main className="Main">
+        {/* <Route path="/SalesMenu"></Route>
+        <Route path="/ProductsMenu"></Route>
+        <Route path="/UsersMenu"></Route> */}
+      </main>
+
+      <footer className="Footer"></footer>
     </div>
   );
 }

@@ -6,18 +6,20 @@ import "./SalesMenu.scss";
 
 export function SalesMenu() {
   return (
-    <div className="CanvasSales">
-      <header className="SalesMenuHeader">
-        <p>
+    <div className="Canvas">
+      <header className="Header">
+        <label className="SectionLabel">
           <b>Ventas</b>
-        </p>
+        </label>
         <div className="ButtonContainer">
-          <BsPlusSquare size="1.5em" />
+          <BsPlusSquare className="IconAdd" size="1.5em" />
           <button className="ButtonAdd">Agregar</button>
         </div>
       </header>
 
-      <main className="SalesContMain">
+      <aside className="Aside"></aside>
+
+      <main className="Main">
         <div className="BarHeader">
           <p>
             <b>ID Venta</b>
@@ -29,8 +31,13 @@ export function SalesMenu() {
             <b>Nombre Cliente</b>
           </p>
           <div className="SearchContainer">
+            <input
+              className="InutSearch"
+              type="search"
+              placeholder="Buscar..."
+            ></input>
+            {/* //? Poner el icono dentro del input */}
             <BsSearch />
-            <input type="search" placeholder="Buscar..."></input>
           </div>
         </div>
         <div className="FormContainer">
@@ -43,6 +50,8 @@ export function SalesMenu() {
           <InfoSales />
         </div>
       </main>
+
+      <footer className="Footer"></footer>
     </div>
   );
 }

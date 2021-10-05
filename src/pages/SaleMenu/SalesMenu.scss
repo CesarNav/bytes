@@ -1,73 +1,91 @@
-//@use "./commons/Colors" as *;
-$primaryColor: #fefbf3;
-$elementColor: #fb9300;
+@import "../../styles/commons/Colors";
+@import "../../styles/commons/mixin.scss";
 
-.CanvasSales {
-  width: 1700px;
-  height: 1080px;
+.Canvas {
+  @include CanvasLayer($backgroundColor);
+  @include Distribution;
 
-  .SalesMenuHeader {
-    background-color: transparent;
+  .Header {
     border-bottom: 2px solid $elementColor;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
-    p {
-      margin: 0;
+    .SectionLabel {
+      display: block;
+      margin-left: 10px;
       color: $elementColor;
-      font-size: 45px;
+      justify-self: center;
+
+      b {
+        font-size: 25pt;
+      }
     }
 
     .ButtonContainer {
       display: flex;
-      flex-direction: row;
+      margin-right: 10px;
       align-items: center;
       color: $elementColor;
 
+      .IconAdd {
+        margin: 10px 0 10px 10px;
+      }
       .ButtonAdd {
+        background-color: transparent;
+        margin: 10px 10px 10px 0;
         border: none;
-        margin: 0 0 0 10px;
-        background-color: $elementColor;
-        font-size: 22.5px;
-        border-radius: 5px;
-        color: $primaryColor;
+        font-size: 17pt;
+        color: $elementColor;
         cursor: pointer;
       }
 
       &:hover {
+        background-color: $primaryColor;
+        border-radius: 14px;
         cursor: pointer;
       }
     }
   }
 
-  .SalesContMain {
-    height: 100%;
-    margin: 0 10px 40px 10px;
-    padding: 40px 10px 40px 10px;
+  .Main {
+    background-color: $primaryColor;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 8% repeat(9, 10%) 2%;
 
     .BarHeader {
-      background-color: $primaryColor;
+      grid-column: 1/5;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-
-      font-size: 25px;
+      align-items: center;
       color: $elementColor;
-    }
 
-    .SearchContainer {
-      background-color: $primaryColor;
-      display: inline-block;
-      color: $elementColor;
-      align-self: center;
+      .SearchContainer {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $elementColor;
 
-      input {
-        background-color: $primaryColor;
-        padding: 5px;
-        border: 2px solid $elementColor;
-        border-radius: 20px;
+        .InutSearch {
+          background-color: $primaryColor;
+          border: 2px solid $elementColor;
+          border-radius: 5px;
+
+          &:active {
+            border: 2px solid $elementColor;
+          }
+        }
       }
+    }
+    .FormContainer {
+      margin: 0 10px 0 10px;
+      grid-column: 1/5;
+      grid-row-start: 2;
     }
   }
 }
