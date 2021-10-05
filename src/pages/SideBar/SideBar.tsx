@@ -2,7 +2,7 @@ import { TiTags } from "react-icons/ti";
 import { BiCube, BiUser } from "react-icons/bi";
 import { SiShopware } from "react-icons/si";
 
-import "../styles/components/SideBar.scss";
+import "./SideBar.scss";
 
 export function SideBar() {
   return (

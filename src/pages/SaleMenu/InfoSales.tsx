@@ -1,4 +1,4 @@
-import "../styles/components/InfoSales.scss";
+import "./InfoSales.scss";
 
 import { FiEdit } from "react-icons/fi";
 import { BsTrash } from "react-icons/bs";

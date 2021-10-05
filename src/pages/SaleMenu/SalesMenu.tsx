@@ -2,7 +2,7 @@ import { InfoSales } from "./InfoSales";
 
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
-import "../styles/components/SalesMenu.scss";
+import "./SalesMenu.scss";
 
 export function SalesMenu() {
   return (
