@@ -1,34 +1,32 @@
 @import "../../styles/commons/Colors";
 @import "../../styles/commons/mixin.scss";
 
-.Canvas {
-  @include CanvasLayer($backgroundColor);
-  @include Distribution;
+.Aside {
+  grid-row: 2/2;
 
   .AsideContent {
-    height: 1040px;
+    height: 864px;
     margin: 20px;
     display: grid;
     grid-template-rows: 20% 80%;
 
     .LogoContainer {
       grid-row-start: 1;
-      align-self: center;
+      align-self: flex-start;
       color: $elementColor;
     }
 
     .ButtonRouters {
-      height: 816px;
+      height: 732px;
       grid-row-start: 2;
-      margin: 0 20px 20px 20px;
-      align-self: flex-start;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      align-self: center;
+      display: grid;
+      grid-template-rows: 20% 20% 20% 20% 20%;
 
-      .ButtonContainer {
+      .Btn-Cont {
         color: $elementColor;
-        width: 340px;
+        width: 370px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -50,6 +48,22 @@
           border-radius: 30px 0 0 30px;
           cursor: pointer;
         }
+      }
+
+      @mixin Btn-Routers {
+        justify-self: center;
+        align-self: center;
+      }
+      .Cont_Sales {
+        @include Btn-Routers();
+      }
+
+      .Cont_Products {
+        @include Btn-Routers();
+      }
+
+      .Cont_Users {
+        @include Btn-Routers();
       }
     }
   }

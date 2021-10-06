@@ -17,41 +17,36 @@ export function SalesMenu() {
         </div>
       </header>
 
-      <aside className="Aside"></aside>
-
       <main className="Main">
-        <div className="BarHeader">
-          <p>
-            <b>ID Venta</b>
-          </p>
-          <p>
-            <b>ID Cliente</b>
-          </p>
-          <p>
-            <b>Nombre Cliente</b>
-          </p>
-          <div className="SearchContainer">
-            <input
-              className="InutSearch"
-              type="search"
-              placeholder="Buscar..."
-            ></input>
-            {/* //? Poner el icono dentro del input */}
-            <BsSearch />
+        <div className="FormContainer">
+          <div className="BarHeader">
+            <label>
+              <b>ID Venta</b>
+            </label>
+            <label>
+              <b>ID Cliente</b>
+            </label>
+            <label>
+              <b>Nombre Cliente</b>
+            </label>
+            <div className="SearchContainer">
+              <input
+                className="InutSearch"
+                type="search"
+                placeholder="Buscar..."
+              ></input>
+              <BsSearch />
+            </div>
+          </div>
+          <div>
+            <InfoSales />
+            <InfoSales />
+            <InfoSales />
+            <InfoSales />
+            <InfoSales />
           </div>
         </div>
-        <div className="FormContainer">
-          <InfoSales />
-          <InfoSales />
-          <InfoSales />
-          <InfoSales />
-          <InfoSales />
-          <InfoSales />
-          <InfoSales />
-        </div>
       </main>
-
-      <footer className="Footer"></footer>
     </div>
   );
 }

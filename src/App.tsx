@@ -6,16 +6,19 @@ import Login from "./pages/login/login";
 import { SideBar } from "./pages/SideBar/SideBar";
 import { SalesMenu } from "./pages/SaleMenu/SalesMenu";
 
+import "./styles/commons/mixin.scss";
+
 function App() {
   return (
     <div className="App">
       {/* <Login /> */}
+      <div className="CanvasLayer">
+        <SideBar />
 
-      {/* <SideBar /> */}
-
-      <main className="main">
-        <SalesMenu />
-      </main>
+        <main className="main">
+          <SalesMenu />
+        </main>
+      </div>
     </div>
   );
 }

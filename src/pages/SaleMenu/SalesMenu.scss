@@ -1,91 +1,107 @@
 @import "../../styles/commons/Colors";
 @import "../../styles/commons/mixin.scss";
 
-.Canvas {
-  @include CanvasLayer($backgroundColor);
-  @include Distribution;
+.Header {
+  margin: 10px 10px 10px 0;
+  grid-column: 2 / 3;
+  grid-row: 1;
 
-  .Header {
-    border-bottom: 2px solid $elementColor;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  border-bottom: 2px solid $elementColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    .SectionLabel {
-      display: block;
-      margin-left: 10px;
-      color: $elementColor;
-      justify-self: center;
+  .SectionLabel {
+    display: block;
+    margin-left: 10px;
+    color: $elementColor;
+    justify-self: center;
 
-      b {
-        font-size: 25pt;
-      }
-    }
-
-    .ButtonContainer {
-      display: flex;
-      margin-right: 10px;
-      align-items: center;
-      color: $elementColor;
-
-      .IconAdd {
-        margin: 10px 0 10px 10px;
-      }
-      .ButtonAdd {
-        background-color: transparent;
-        margin: 10px 10px 10px 0;
-        border: none;
-        font-size: 17pt;
-        color: $elementColor;
-        cursor: pointer;
-      }
-
-      &:hover {
-        background-color: $primaryColor;
-        border-radius: 14px;
-        cursor: pointer;
-      }
+    b {
+      font-size: 25pt;
     }
   }
 
-  .Main {
-    background-color: $primaryColor;
-    border-radius: 25px;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 8% repeat(9, 10%) 2%;
+  .ButtonContainer {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    color: $elementColor;
+
+    .IconAdd {
+      margin: 10px 0 10px 10px;
+    }
+    .ButtonAdd {
+      background-color: transparent;
+      margin: 10px 10px 10px 0;
+      border: none;
+      font-size: 17pt;
+      color: $elementColor;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $primaryColor;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.Main {
+  margin: 10px 10px 10px 0;
+
+  background-color: $primaryColor;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 8% repeat(9, 10%) 2%;
+
+  .FormContainer {
+    margin: 0 10px 0 10px;
+    grid-column: 1/5;
+    grid-row: 1/11;
+    height: 1000px;
 
     .BarHeader {
       grid-column: 1/5;
+      margin-top: 20px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
       color: $elementColor;
+      font-size: 20px;
 
       .SearchContainer {
         background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 2px solid $elementColor;
+        border-radius: 10px;
         color: $elementColor;
 
         .InutSearch {
-          background-color: $primaryColor;
-          border: 2px solid $elementColor;
-          border-radius: 5px;
+          background-color: transparent;
+          padding: 5px;
+          width: 200px;
+          height: 30px;
+          border: none;
+          border-radius: 10px;
 
-          &:active {
-            border: 2px solid $elementColor;
+          &:focus {
+            outline: none;
           }
         }
       }
     }
-    .FormContainer {
-      margin: 0 10px 0 10px;
-      grid-column: 1/5;
-      grid-row-start: 2;
-    }
   }
+}
+
+.Footer {
+  margin: 10px 10px 10px 0;
+  grid-column: 2 / 3;
+  grid-row: 3;
 }
