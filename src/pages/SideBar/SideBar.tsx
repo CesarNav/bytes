@@ -4,11 +4,13 @@ import { SiShopware } from "react-icons/si";
 
 import { Switch, Route, Link } from "react-router-dom";
 
-import { SalesMenu } from "../SaleMenu/SalesMenu";
+import SalesMenu from "../SaleMenu/SalesMenu";
+import ProductsMenus from "../ProductsMenu/ProductsMenu";
+import UsersMenu from "../UsersMenu/UsersMenu";
 
 import "./SideBar.scss";
 
-export function SideBar() {
+const SideBar = () => {
   return (
     <div className="CanvasLayer">
       <aside className="Aside">
@@ -17,24 +19,18 @@ export function SideBar() {
             <SiShopware size="8em" />
           </div>
           <div className="ButtonRouters">
-            <div className="Btn-Cont Cont_Sales">
+            <Link className="Btn-Cont Cont_Sales" to="Sales-Menu">
               <TiTags className="IconRouter" size="3.5em" />
-              <Link className="ButtonRouter" to="Sales-Menu">
-                Ventas
-              </Link>
-            </div>
-            <div className="Btn-Cont Cont_Products">
+              <label className="ButtonRouter">Ventas</label>
+            </Link>
+            <Link className="Btn-Cont Cont_Products" to="/Products-Menu">
               <BiCube className="IconRouter" size="3.5em" />
-              <Link className="ButtonRouter" to="/">
-                Productos
-              </Link>
-            </div>
-            <div className="Btn-Cont Cont_Users">
+              <label className="ButtonRouter">Productos</label>
+            </Link>
+            <Link className="Btn-Cont Cont_Users" to="/Users-Menu">
               <BiUser className="IconRouter" size="3.5em" />
-              <Link className="ButtonRouter" to="/">
-                Usuarios
-              </Link>
-            </div>
+              <label className="ButtonRouter">Usuarios</label>
+            </Link>
           </div>
         </div>
       </aside>
@@ -43,7 +39,17 @@ export function SideBar() {
         <Route path="/Sales-Menu">
           <SalesMenu />
         </Route>
+
+        <Route path="/Products-Menu">
+          <ProductsMenus />
+        </Route>
+
+        <Route path="/Users-Menu">
+          <UsersMenu />
+        </Route>
       </main>
     </div>
   );
-}
+};
+
+export default SideBar;

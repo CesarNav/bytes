@@ -1,14 +1,13 @@
-import "./InfoSales.scss";
-
 import { FiEdit } from "react-icons/fi";
 import { BsTrash } from "react-icons/bs";
 
-export function InfoSales() {
+import "./InfoProducts.scss";
+
+const InfoProducts = () => {
   return (
-    <form className="Form">
+    <form className="FormProducts">
       <label>#123456789</label>
-      <label>CC. ##########</label>
-      <label>Usuario Nombre Apellido</label>
+      <label>Descripcion Producto</label>
 
       <div className="ButtonsContainer">
         <div className="ButtonsActions">
@@ -20,4 +19,6 @@ export function InfoSales() {
       </div>
     </form>
   );
-}
+};
+
+export default InfoProducts;

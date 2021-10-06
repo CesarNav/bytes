@@ -9,8 +9,8 @@
   @include Main;
 }
 
-.MainSales {
-  grid-template-columns: 25% 25% 25% 25%;
+.MainUsers {
+  grid-template-columns: 25% 50% 25%;
   grid-template-rows: 8% repeat(9, 10%) 2%;
 
   .Form {

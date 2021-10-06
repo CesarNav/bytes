@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.css";
 
-import Login from "./pages/login/login";
+//import Login from "./pages/login/login";
 
-import { SideBar } from "./pages/SideBar/SideBar";
-//import { SalesMenu } from "./pages/SaleMenu/SalesMenu";
+import SideBar from "./pages/SideBar/SideBar";
 
 function App() {
   return (

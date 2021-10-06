@@ -1,15 +1,15 @@
-import InfoSales from "./components/InfoSales";
-
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
-import "./SalesMenu.scss";
+import InfoProducts from "./components/InfoProducts";
 
-const SalesMenu = () => {
+import "./ProductsMenu.scss";
+
+const ProductsMenus = () => {
   return (
     <div>
       <header className="Header">
         <label className="SectionLabel">
-          <b>Ventas</b>
+          <b>Productos</b>
         </label>
         <div className="ButtonContainer">
           <BsPlusSquare className="IconAdd" size="1.5em" />
@@ -17,17 +17,14 @@ const SalesMenu = () => {
         </div>
       </header>
 
-      <main className="Main MainSales">
+      <main className="Main MainProducts">
         <div className="Form">
           <div className="BarHeader">
             <label>
-              <b>ID Venta</b>
+              <b>Identificador</b>
             </label>
             <label>
-              <b>ID Cliente</b>
-            </label>
-            <label>
-              <b>Nombre Cliente</b>
+              <b>Descripcion</b>
             </label>
             <div className="SearchContainer">
               <input
@@ -40,13 +37,13 @@ const SalesMenu = () => {
           </div>
 
           <div>
-            <InfoSales />
-            <InfoSales />
-            <InfoSales />
-            <InfoSales />
-            <InfoSales />
-            <InfoSales />
-            <InfoSales />
+            <InfoProducts />
+            <InfoProducts />
+            <InfoProducts />
+            <InfoProducts />
+            <InfoProducts />
+            <InfoProducts />
+            <InfoProducts />
           </div>
         </div>
       </main>
@@ -54,4 +51,4 @@ const SalesMenu = () => {
   );
 };
 
-export default SalesMenu;
+export default ProductsMenus;

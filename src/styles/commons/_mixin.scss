@@ -11,6 +11,50 @@
 
 @mixin Header {
   grid-column: 2/3;
+
+  margin: 10px 10px 10px 0;
+  border-bottom: 2px solid $elementColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .SectionLabel {
+    display: block;
+    margin-left: 10px;
+    color: $elementColor;
+    justify-self: center;
+
+    b {
+      font-size: 25pt;
+    }
+  }
+
+  .ButtonContainer {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    color: $elementColor;
+    margin-bottom: 5px;
+
+    .IconAdd {
+      margin: 10px 0 10px 10px;
+    }
+    .ButtonAdd {
+      background-color: transparent;
+      margin: 10px 10px 10px 0;
+      border: none;
+      font-size: 17pt;
+      color: $elementColor;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $primaryColor;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+  }
 }
 
 @mixin Aside {
@@ -20,6 +64,11 @@
 @mixin Main {
   grid-column-start: 2;
   grid-row-start: 2;
+
+  margin: 10px 10px 10px 0;
+  background-color: $primaryColor;
+  border-radius: 25px;
+  display: grid;
 }
 
 @mixin Footer {
