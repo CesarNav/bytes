@@ -1,11 +1,10 @@
 @import "../../styles/commons/Colors";
-@import "../../styles/commons/mixin.scss";
+@import "../../styles/commons/mixin";
 
 .Header {
-  margin: 10px 10px 10px 0;
-  grid-column: 2 / 3;
-  grid-row: 1;
+  @include Header;
 
+  margin: 10px 10px 10px 0;
   border-bottom: 2px solid $elementColor;
   display: flex;
   flex-direction: row;
@@ -28,6 +27,7 @@
     margin-right: 10px;
     align-items: center;
     color: $elementColor;
+    margin-bottom: 5px;
 
     .IconAdd {
       margin: 10px 0 10px 10px;
@@ -50,6 +50,7 @@
 }
 
 .Main {
+  @include Main;
   margin: 10px 10px 10px 0;
 
   background-color: $primaryColor;
@@ -62,7 +63,7 @@
     margin: 0 10px 0 10px;
     grid-column: 1/5;
     grid-row: 1/11;
-    height: 1000px;
+    height: 995px;
 
     .BarHeader {
       grid-column: 1/5;

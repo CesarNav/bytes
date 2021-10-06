@@ -1,6 +1,4 @@
-//@use "./commons/Colors" as *;
-$secundaryColor: #eeeeee;
-$elementColor: #fb9300;
+@import "../../styles/commons/Colors";
 
 .Form {
   padding: 0;
