@@ -2,7 +2,7 @@ import { TiTags } from "react-icons/ti";
 import { BiCube, BiUser } from "react-icons/bi";
 import { SiShopware } from "react-icons/si";
 
-import { Switch, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 import SalesMenu from "../SaleMenu/SalesMenu";
 import ProductsMenus from "../ProductsMenu/ProductsMenu";
@@ -35,19 +35,17 @@ const SideBar = () => {
         </div>
       </aside>
 
-      <main>
-        <Route path="/Sales-Menu">
-          <SalesMenu />
-        </Route>
+      <Route path="/Sales-Menu">
+        <SalesMenu />
+      </Route>
 
-        <Route path="/Products-Menu">
-          <ProductsMenus />
-        </Route>
+      <Route path="/Products-Menu">
+        <ProductsMenus />
+      </Route>
 
-        <Route path="/Users-Menu">
-          <UsersMenu />
-        </Route>
-      </main>
+      <Route path="/Users-Menu">
+        <UsersMenu />
+      </Route>
     </div>
   );
 };

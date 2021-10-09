@@ -5,7 +5,7 @@ import "./InfoUsers.scss";
 
 const InfoUsers = () => {
   return (
-    <form className="FormUsers">
+    <form className="Form">
       <label>#123456789</label>
       <label>Rol usuario</label>
       <label>Estado del usuario</label>

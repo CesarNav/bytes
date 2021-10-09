@@ -8,43 +8,39 @@ const ProductsMenus = () => {
   return (
     <div>
       <header className="Header">
-        <label className="SectionLabel">
+        <label>
           <b>Productos</b>
         </label>
         <div className="ButtonContainer">
           <BsPlusSquare className="IconAdd" size="1.5em" />
-          <button className="ButtonAdd">Agregar</button>
+          <button>Agregar</button>
         </div>
       </header>
 
-      <main className="Main MainProducts">
-        <div className="Form">
-          <div className="BarHeader">
-            <label>
-              <b>Identificador</b>
-            </label>
-            <label>
-              <b>Descripcion</b>
-            </label>
-            <div className="SearchContainer">
-              <input
-                className="InutSearch"
-                type="search"
-                placeholder="Buscar..."
-              ></input>
-              <BsSearch />
-            </div>
+      <main className="Main">
+        <div className="ItemsBar">
+          <label>
+            <b>Identificador</b>
+          </label>
+          <label>
+            <b>Descripcion</b>
+          </label>
+          <div className="SearchContainer">
+            <input
+              className="InutSearch"
+              type="search"
+              placeholder="Buscar..."
+            ></input>
+            <BsSearch />
           </div>
+        </div>
 
-          <div>
-            <InfoProducts />
-            <InfoProducts />
-            <InfoProducts />
-            <InfoProducts />
-            <InfoProducts />
-            <InfoProducts />
-            <InfoProducts />
-          </div>
+        <div className="FormContainer">
+          <InfoProducts />
+          <InfoProducts />
+          <InfoProducts />
+          <InfoProducts />
+          <InfoProducts />
         </div>
       </main>
     </div>

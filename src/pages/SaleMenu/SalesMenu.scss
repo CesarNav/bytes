@@ -2,55 +2,11 @@
 @import "../../styles/commons/mixin";
 
 .Header {
+  //? IMPORTANDO LA ESTRUCTURA DEL ENCABEZADO
   @include Header;
 }
 
 .Main {
+  //? IMPORTANDO LA ESTRUCTURA DEL CONTENIDO PRINCIPAL
   @include Main;
-}
-
-.MainSales {
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 8% repeat(9, 10%) 2%;
-
-  .Form {
-    margin: 0 10px 0 10px;
-    grid-column: 1/5;
-    grid-row: 1/11;
-    height: 995px;
-
-    .BarHeader {
-      grid-column: 1/5;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      color: $elementColor;
-      font-size: 20px;
-
-      .SearchContainer {
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid $elementColor;
-        border-radius: 10px;
-        color: $elementColor;
-
-        .InutSearch {
-          background-color: transparent;
-          padding: 5px;
-          width: 200px;
-          height: 30px;
-          border: none;
-          border-radius: 10px;
-
-          &:focus {
-            outline: none;
-          }
-        }
-      }
-    }
-  }
 }

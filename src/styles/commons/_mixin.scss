@@ -1,5 +1,7 @@
 @import "./Colors";
+@import "./Fonts";
 
+//? ESTRUCTURANDO EL ESPACIO DE TRABAJO
 @mixin CanvasLayer {
   background-color: $backgroundColor;
   width: 1920px;
@@ -9,8 +11,10 @@
   grid-template-columns: 20% 80%;
 }
 
+//? ENCABEZADO
 @mixin Header {
   grid-column: 2/3;
+  grid-row-start: 1;
 
   margin: 10px 10px 10px 0;
   border-bottom: 2px solid $elementColor;
@@ -19,36 +23,37 @@
   justify-content: space-between;
   align-items: center;
 
-  .SectionLabel {
-    display: block;
+  //? TITULO
+  label {
     margin-left: 10px;
     color: $elementColor;
-    justify-self: center;
-
-    b {
-      font-size: 25pt;
-    }
+    font-size: $titleSize;
   }
 
+  //? CONTENDOR DEL ICONO Y BOTON
   .ButtonContainer {
-    display: flex;
     margin-right: 10px;
+    display: flex;
     align-items: center;
     color: $elementColor;
     margin-bottom: 5px;
 
+    //? ICONO
     .IconAdd {
       margin: 10px 0 10px 10px;
     }
-    .ButtonAdd {
+
+    //? BOTON
+    button {
       background-color: transparent;
       margin: 10px 10px 10px 0;
       border: none;
-      font-size: 17pt;
+      font-size: $tagSize;
       color: $elementColor;
       cursor: pointer;
     }
 
+    //? INTERACCION
     &:hover {
       background-color: $primaryColor;
       border-radius: 14px;
@@ -57,21 +62,120 @@
   }
 }
 
+//? BARRA LATERAL
 @mixin Aside {
   grid-row: 1/4;
 }
 
+//? CONTENIDO PRINCIPAL
 @mixin Main {
   grid-column-start: 2;
-  grid-row-start: 2;
+  grid-row-start: 3;
 
   margin: 10px 10px 10px 0;
   background-color: $primaryColor;
   border-radius: 25px;
   display: grid;
+
+  //? SUBTITULOS E INPUT DE BUSCAR
+  .ItemsBar {
+    grid-column: 1/5;
+    grid-row-start: 1;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: $elementColor;
+    font-size: $subtitleSize;
+
+    //? INPUT E ICONO
+    .SearchContainer {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $elementColor;
+      border-radius: 10px;
+      color: $elementColor;
+
+      //? INPUT
+      .InutSearch {
+        background-color: transparent;
+        padding: 5px;
+        width: 200px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+
+        //? INTERACCION
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  //? CONTENEDOR DEL FORMULARIO
+  .FormContainer {
+    margin: 0 10px 0 10px;
+    grid-column: 1/5;
+    grid-row: 2/11;
+    height: 995px;
+    overflow: auto;
+  }
 }
 
+//? PIE DE PAGINA
 @mixin Footer {
   grid-row-start: 3;
   grid-column: 2/3;
+}
+//? ESTRUCTURANDO EL FORMULARIO
+@mixin Form {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: $secundaryColor;
+  border-radius: 20px;
+
+  margin: 20px 10px 0px 10px;
+  height: 70px;
+
+  //? TITULO
+  label {
+    font-size: $textSize;
+    align-self: center;
+  }
+
+  //? CONTENEDOR
+  .ButtonsContainer {
+    display: flex;
+
+    //? BOTON EDITAR Y ELIMINAR
+    .ButtonsActions {
+      margin: 20px 20px 20px 25px;
+      display: flex;
+      width: 50px;
+      height: 50px;
+      align-self: center;
+      background-color: $secundaryColor;
+      border-radius: 50px;
+      border: 1px solid $elementColor;
+
+      color: $elementColor;
+
+      //? ICONOS
+      .Icons {
+        align-self: center;
+        justify-content: center;
+        margin: 0 0 0 10px;
+      }
+
+      //? INTERACCION
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }

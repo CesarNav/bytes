@@ -5,7 +5,7 @@ import "./InfoSales.scss";
 
 const InfoSales = () => {
   return (
-    <form className="FormSales">
+    <form className="Form">
       <label>#123456789</label>
       <label>CC. ##########</label>
       <label>Usuario Nombre Apellido</label>

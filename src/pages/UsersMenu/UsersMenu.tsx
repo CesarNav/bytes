@@ -9,44 +9,42 @@ const UsersMenu = () => {
   return (
     <div>
       <header className="Header">
-        <label className="SectionLabel">
+        <label>
           <b>Usuarios</b>
         </label>
         <div className="ButtonContainer">
           <BsPlusSquare className="IconAdd" size="1.5em" />
-          <button className="ButtonAdd">Agregar</button>
+          <button>Agregar</button>
         </div>
       </header>
 
-      <main className="Main MainUsers">
-        <div className="Form">
-          <div className="BarHeader">
-            <label>
-              <b>ID Usuario</b>
-            </label>
-            <label>
-              <b>Rol</b>
-            </label>
-            <label>
-              <b>Estado</b>
-            </label>
-            <div className="SearchContainer">
-              <input
-                className="InutSearch"
-                type="search"
-                placeholder="Buscar..."
-              ></input>
-              <BsSearch />
-            </div>
+      <main className="Main">
+        <div className="ItemsBar">
+          <label>
+            <b>ID Usuario</b>
+          </label>
+          <label>
+            <b>Rol</b>
+          </label>
+          <label>
+            <b>Estado</b>
+          </label>
+          <div className="SearchContainer">
+            <input
+              className="InutSearch"
+              type="search"
+              placeholder="Buscar..."
+            ></input>
+            <BsSearch />
           </div>
+        </div>
 
-          <div>
-            <InfoUsers />
-            <InfoUsers />
-            <InfoUsers />
-            <InfoUsers />
-            <InfoUsers />
-          </div>
+        <div className="FormContainer">
+          <InfoUsers />
+          <InfoUsers />
+          <InfoUsers />
+          <InfoUsers />
+          <InfoUsers />
         </div>
       </main>
     </div>
