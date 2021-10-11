@@ -19,7 +19,7 @@ const SideBar = () => {
             <SiShopware size="8em" />
           </div>
           <div className="ButtonRouters">
-            <Link className="Btn-Cont Cont_Sales" to="Sales-Menu">
+            <Link className="Btn-Cont Cont_Sales" to="/Sales-Menu">
               <TiTags className="IconRouter" size="3.5em" />
               <label className="ButtonRouter">Ventas</label>
             </Link>

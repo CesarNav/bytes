@@ -1,19 +1,41 @@
+import { useState } from "react";
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
-
-import InfoProducts from "./components/InfoProducts";
 
 import "./ProductsMenu.scss";
 
+import InfoProducts from "./components/InfoProducts";
+import UseModal from "../ModalWindow/UseModal";
+
 const ProductsMenus = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible((wasModalVisible) => !wasModalVisible);
+  };
+
   return (
     <div>
       <header className="Header">
         <label>
           <b>Productos</b>
         </label>
-        <div className="ButtonContainer">
+        <div className="ButtonContainer" onClick={toggleModal}>
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
+          <UseModal
+            isModalVisible={isModalVisible}
+            onBackdropClick={toggleModal}
+          >
+            <div className="ModalHeader">
+              <label>Registrar Producto</label>
+              <label># 000090001</label>
+            </div>
+
+            <div className="InputsContainer">
+              <label>Descripcion</label>
+              <textarea></textarea>
+            </div>
+          </UseModal>
         </div>
       </header>
 
