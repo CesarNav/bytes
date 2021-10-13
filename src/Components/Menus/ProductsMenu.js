@@ -1,41 +1,20 @@
 import { useState } from "react";
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
-import "./ProductsMenu.scss";
+import FormProducts from "../Forms/FormProducts";
 
-import InfoProducts from "./components/InfoProducts";
-import UseModal from "../ModalWindow/UseModal";
+import "../../Styles/Commons/Layout.scss";
 
 const ProductsMenus = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalVisible((wasModalVisible) => !wasModalVisible);
-  };
-
   return (
     <div>
       <header className="Header">
         <label>
           <b>Productos</b>
         </label>
-        <div className="ButtonContainer" onClick={toggleModal}>
+        <div className="ButtonContainer">
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
-          <UseModal
-            isModalVisible={isModalVisible}
-            onBackdropClick={toggleModal}
-          >
-            <div className="ModalHeader">
-              <label>Registrar Producto</label>
-              <label># 000090001</label>
-            </div>
-
-            <div className="InputsContainer">
-              <label>Descripcion</label>
-              <textarea></textarea>
-            </div>
-          </UseModal>
         </div>
       </header>
 
@@ -58,11 +37,11 @@ const ProductsMenus = () => {
         </div>
 
         <div className="FormContainer">
-          <InfoProducts />
-          <InfoProducts />
-          <InfoProducts />
-          <InfoProducts />
-          <InfoProducts />
+          <FormProducts />
+          <FormProducts />
+          <FormProducts />
+          <FormProducts />
+          <FormProducts />
         </div>
       </main>
     </div>

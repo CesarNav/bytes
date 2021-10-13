@@ -4,11 +4,11 @@ import { SiShopware } from "react-icons/si";
 
 import { Route, Link } from "react-router-dom";
 
-import SalesMenu from "../SaleMenu/SalesMenu";
-import ProductsMenus from "../ProductsMenu/ProductsMenu";
-import UsersMenu from "../UsersMenu/UsersMenu";
+import SalesMenu from "./Menus/SalesMenu";
+import ProductsMenus from "./Menus/ProductsMenu";
+import UsersMenu from "./Menus/UsersMenu";
 
-import "./SideBar.scss";
+import "../Styles/SideBar.scss";
 
 const SideBar = () => {
   return (
@@ -16,7 +16,7 @@ const SideBar = () => {
       <aside className="Aside">
         <div className="AsideContent">
           <div className="LogoContainer">
-            <SiShopware size="8em" />
+            <SiShopware size="10em" />
           </div>
           <div className="ButtonRouters">
             <Link className="Btn-Cont Cont_Sales" to="/Sales-Menu">

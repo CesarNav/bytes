@@ -1,8 +1,8 @@
-@import "./Colors";
-@import "./Fonts";
+@import "../Mixins/Colors";
+@import "../Mixins/Fonts";
 
 //? ESTRUCTURANDO EL FORMULARIO
-@mixin Form {
+.Form {
   padding: 0;
   display: flex;
   justify-content: space-around;

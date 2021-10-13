@@ -1,9 +1,6 @@
-import React from "react";
-import "./App.css";
+//import Login from "./01 Login/login";
 
-//import Login from "./pages/login/login";
-
-import SideBar from "./pages/SideBar/SideBar";
+import SideBar from "./Components/SideBar";
 
 function App() {
   return (

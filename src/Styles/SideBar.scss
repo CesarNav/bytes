@@ -1,11 +1,17 @@
-@import "../../styles/commons/Colors";
-@import "../../styles/commons/layout";
+@import "./Mixins/Colors";
+@import "./Mixins/Fonts";
 
+//? ESTRUCTURANDO EL ESPACIO DE TRABAJO
 .CanvasLayer {
-  @include CanvasLayer;
+  background-color: $backgroundColor;
+  width: 1920px;
+  height: 1080px;
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: 20% 80%;
 
   .Aside {
-    @include Aside;
+    grid-row: 1/4;
 
     .AsideContent {
       height: 864px;
@@ -15,8 +21,11 @@
 
       .LogoContainer {
         grid-row-start: 1;
-        align-self: flex-start;
+        align-self: center;
+        justify-content: center;
         color: $elementColor;
+        margin-top: 100px;
+        margin-left: 80px;
       }
 
       .ButtonRouters {
@@ -26,6 +35,7 @@
 
         display: grid;
         grid-template-rows: 20% 20% 20% 20% 20%;
+        margin-top: 250px;
 
         .Btn-Cont {
           color: $elementColor;
