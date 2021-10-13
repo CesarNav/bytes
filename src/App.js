@@ -1,13 +1,13 @@
 //import Login from "./01 Login/login";
 
-import SideBar from "./Components/SideBar";
+import StartPage from "./Components/StartPage";
 
 function App() {
   return (
     <div className="App">
       {/* <Login /> */}
 
-      <SideBar />
+      <StartPage />
     </div>
   );
 }

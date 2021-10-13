@@ -1,20 +1,30 @@
-import { useState } from "react";
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
+
+import { UseModal } from "../../Hooks/UseModal";
+import Modal from "../Modal";
 
 import FormProducts from "../Forms/FormProducts";
 
-import "../../Styles/Commons/Layout.scss";
+import "../../Styles/Commons/Menu.scss";
 
-const ProductsMenus = () => {
+const MenuProducts = () => {
+  const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
+
   return (
     <div>
       <header className="Header">
         <label>
           <b>Productos</b>
         </label>
-        <div className="ButtonContainer">
+        <div className="ButtonContainer" onClick={openModalAdd}>
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
+          {isOpen && (
+            <Modal title="Registrar Producto" closeModal={closeModalAdd}>
+              <label>Descripcion</label>
+              <textarea></textarea>
+            </Modal>
+          )}
         </div>
       </header>
 
@@ -38,14 +48,10 @@ const ProductsMenus = () => {
 
         <div className="FormContainer">
           <FormProducts />
-          <FormProducts />
-          <FormProducts />
-          <FormProducts />
-          <FormProducts />
         </div>
       </main>
     </div>
   );
 };
 
-export default ProductsMenus;
+export default MenuProducts;

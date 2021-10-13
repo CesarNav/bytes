@@ -4,13 +4,13 @@ import { SiShopware } from "react-icons/si";
 
 import { Route, Link } from "react-router-dom";
 
-import SalesMenu from "./Menus/SalesMenu";
-import ProductsMenus from "./Menus/ProductsMenu";
-import UsersMenu from "./Menus/UsersMenu";
+import MenuSales from "./Menus/MenuSales";
+import MenuProducts from "./Menus/MenuProducts";
+import MenuUsers from "./Menus/MenuUsers";
 
-import "../Styles/SideBar.scss";
+import "../Styles/StartPage.scss";
 
-const SideBar = () => {
+const StartPage = () => {
   return (
     <div className="CanvasLayer">
       <aside className="Aside">
@@ -36,18 +36,18 @@ const SideBar = () => {
       </aside>
 
       <Route path="/Sales-Menu">
-        <SalesMenu />
+        <MenuSales />
       </Route>
 
       <Route path="/Products-Menu">
-        <ProductsMenus />
+        <MenuProducts />
       </Route>
 
       <Route path="/Users-Menu">
-        <UsersMenu />
+        <MenuUsers />
       </Route>
     </div>
   );
 };
 
-export default SideBar;
+export default StartPage;

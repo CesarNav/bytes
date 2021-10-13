@@ -1,19 +1,34 @@
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
+import { UseModal } from "../../Hooks/UseModal";
+import Modal from "../Modal";
+
 import FormUsers from "../Forms/FormUsers";
 
-import "../../Styles/Commons/Layout.scss";
+import "../../Styles/Commons/Menu.scss";
 
-const UsersMenu = () => {
+const MenuUsers = () => {
+  const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
+
   return (
     <div>
       <header className="Header">
         <label>
           <b>Usuarios</b>
         </label>
-        <div className="ButtonContainer">
+        <div className="ButtonContainer" onClick={openModalAdd}>
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
+          {isOpen && (
+            <Modal title="Registrar usuario" closeModal={closeModalAdd}>
+              <label>Numero ID usuario</label>
+              <input id="id_user"></input>
+              <label>Rol</label>
+              <input id="rol_user"></input>
+              <label>Estado</label>
+              <input id="state_user"></input>
+            </Modal>
+          )}
         </div>
       </header>
 
@@ -40,14 +55,10 @@ const UsersMenu = () => {
 
         <div className="FormContainer">
           <FormUsers />
-          <FormUsers />
-          <FormUsers />
-          <FormUsers />
-          <FormUsers />
         </div>
       </main>
     </div>
   );
 };
 
-export default UsersMenu;
+export default MenuUsers;

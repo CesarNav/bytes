@@ -1,19 +1,34 @@
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
+import { UseModal } from "../../Hooks/UseModal";
+import Modal from "../Modal";
+
 import FormSales from "../Forms/FormSales";
 
-import "../../Styles/Commons/Layout.scss";
+import "../../Styles/Commons/Menu.scss";
 
-const SalesMenu = () => {
+const MenuSales = () => {
+  const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
+
   return (
     <div>
       <header className="Header">
         <label>
           <b>Ventas</b>
         </label>
-        <div className="ButtonContainer">
+        <div className="ButtonContainer" onClick={openModalAdd}>
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
+          {isOpen && (
+            <Modal title="Registrar Venta" closeModal={closeModalAdd}>
+              <label>Tipo documento cliente</label>
+              <input id="document_type"></input>
+              <label>Numero documento cliente</label>
+              <input id="id_document"></input>
+              <label>Nombre cliente</label>
+              <input id="name_custumer"></input>
+            </Modal>
+          )}
         </div>
       </header>
 
@@ -40,14 +55,10 @@ const SalesMenu = () => {
 
         <div className="FormContainer">
           <FormSales />
-          <FormSales />
-          <FormSales />
-          <FormSales />
-          <FormSales />
         </div>
       </main>
     </div>
   );
 };
 
-export default SalesMenu;
+export default MenuSales;
