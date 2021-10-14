@@ -37,6 +37,3 @@ body {
 h6 {
   color: #df7861;
 }
-.loginContainer__googleLogin {
-  background-image: url(/src/commons/google_logo.png);
-}

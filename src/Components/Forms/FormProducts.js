@@ -9,6 +9,10 @@ import "../../Styles/Commons/Form.scss";
 const FormProducts = () => {
   const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
 
+  // Call Sales API to get full list of Products
+  // List<Products>;
+  // Publish data on JSX;
+
   return (
     <form className="Form">
       <label className="label">#123456789</label>
