@@ -1,11 +1,11 @@
 import { BsPlusSquare, BsSearch } from "react-icons/bs";
 
 import { UseModal } from "../../Hooks/UseModal";
-import Modal from "../Modal";
 
 import FormProducts from "../Forms/FormProducts";
 
 import "../../Styles/Commons/Menu.scss";
+import "../../Styles/Modal.scss";
 
 const MenuProducts = () => {
   const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
@@ -20,10 +20,31 @@ const MenuProducts = () => {
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
           {isOpen && (
-            <Modal title="Registrar Producto" closeModal={closeModalAdd}>
-              <label>Descripcion</label>
-              <textarea></textarea>
-            </Modal>
+            <>
+              <article className="Modal" onClick={closeModalAdd}>
+                <div
+                  className="ModalContainer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="ModalHeader">
+                    <label>Registrar Producto</label>
+                    <label># 0000000001 </label>
+                  </div>
+
+                  <div className="InputsContainer">
+                    <label>Descripcion</label>
+                    <textarea></textarea>
+                  </div>
+
+                  <div className="ButtonsContainer">
+                    <button>Guardar</button>
+                    <button className="ModalClose" onClick={closeModalAdd}>
+                      Cancelar
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </>
           )}
         </div>
       </header>
