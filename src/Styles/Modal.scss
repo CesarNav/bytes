@@ -51,6 +51,15 @@
       align-self: flex-start;
       display: flex;
       flex-direction: column;
+      position: relative;
+      bottom: 50px;
+
+      .Error {
+        color: rgb(255, 0, 0);
+        font-size: $textSize;
+        position: relative;
+        left: 190px;
+      }
 
       label {
         margin-top: 80px;
@@ -67,6 +76,17 @@
         width: 350px;
         height: 20px;
         padding: 10px;
+      }
+
+      select {
+        margin-top: 10px;
+        background-color: $secundaryColor;
+        border: 1px solid $backgroundColor;
+        border-radius: 25px;
+        width: 350px;
+        height: 50px;
+        padding: 10px;
+        font-size: $textSize;
       }
 
       textarea {
@@ -86,6 +106,10 @@
       align-self: flex-end;
       justify-content: space-around;
       margin-bottom: 100px;
+
+      position: relative;
+      left: 500px;
+      bottom: 100px;
 
       button {
         margin: 25px 0 25px 70px;

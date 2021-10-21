@@ -8,7 +8,7 @@ import "../../Styles/Commons/Menu.scss";
 import "../../Styles/Modal.scss";
 
 const MenuProducts = () => {
-  const [isOpen, openModalAdd, closeModalAdd] = UseModal(false);
+  const [isOpenAdd, openModalAdd, closeModalAdd] = UseModal(false);
 
   return (
     <div>
@@ -19,7 +19,7 @@ const MenuProducts = () => {
         <div className="ButtonContainer" onClick={openModalAdd}>
           <BsPlusSquare className="IconAdd" size="1.5em" />
           <button>Agregar</button>
-          {isOpen && (
+          {isOpenAdd && (
             <>
               <article className="Modal" onClick={closeModalAdd}>
                 <div
@@ -31,17 +31,19 @@ const MenuProducts = () => {
                     <label># 0000000001 </label>
                   </div>
 
-                  <div className="InputsContainer">
-                    <label>Descripcion</label>
-                    <textarea></textarea>
-                  </div>
+                  <form>
+                    <div className="InputsContainer">
+                      <label>Descripcion</label>
+                      <textarea></textarea>
+                    </div>
 
-                  <div className="ButtonsContainer">
-                    <button>Guardar</button>
-                    <button className="ModalClose" onClick={closeModalAdd}>
-                      Cancelar
-                    </button>
-                  </div>
+                    <div className="ButtonsContainer">
+                      <button>Guardar</button>
+                      <button className="ModalClose" onClick={closeModalAdd}>
+                        Cancelar
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </article>
             </>

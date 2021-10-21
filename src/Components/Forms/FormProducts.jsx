@@ -7,7 +7,7 @@ import "../../Styles/Commons/Form.scss";
 import "../../Styles/Modal.scss";
 
 const FormProducts = () => {
-  const [isOpen, openModalEdit, closeModalEdit] = UseModal(false);
+  const [isOpenEdit, openModalEdit, closeModalEdit] = UseModal(false);
 
   return (
     <form className="Form">
@@ -17,7 +17,7 @@ const FormProducts = () => {
         <div className="ButtonsActions" onClick={openModalEdit}>
           <FiEdit className="Icons" size="1.8em" />
         </div>
-        {isOpen && (
+        {isOpenEdit && (
           <>
             <article className="Modal" onClick={closeModalEdit}>
               <div

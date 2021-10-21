@@ -107,6 +107,12 @@
     grid-row: 2/11;
     height: 995px;
     overflow: auto;
+
+    label {
+      font-size: $textSize;
+      align-self: center;
+      text-transform: uppercase;
+    }
   }
 }
 

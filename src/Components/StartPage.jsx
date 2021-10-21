@@ -1,5 +1,5 @@
 import { TiTags } from "react-icons/ti";
-import { BiCube, BiUser } from "react-icons/bi";
+// import { BiCube, BiUser } from "react-icons/bi";
 import { SiShopware } from "react-icons/si";
 
 import { Route, Link } from "react-router-dom";
@@ -23,14 +23,14 @@ const StartPage = () => {
               <TiTags className="IconRouter" size="3.5em" />
               <label className="ButtonRouter">Ventas</label>
             </Link>
-            <Link className="Btn-Cont Cont_Products" to="/Products-Menu">
+            {/* <Link className="Btn-Cont Cont_Products" to="/Products-Menu">
               <BiCube className="IconRouter" size="3.5em" />
               <label className="ButtonRouter">Productos</label>
             </Link>
             <Link className="Btn-Cont Cont_Users" to="/Users-Menu">
               <BiUser className="IconRouter" size="3.5em" />
               <label className="ButtonRouter">Usuarios</label>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </aside>
