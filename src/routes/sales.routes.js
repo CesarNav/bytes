@@ -1,41 +1,41 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json([
-        {
-            SaleId: 1,
-            ClientId: 1,
-            ClientName: "Harry Potter",
-            ProductName: "Wand"
-        },
-        {
-            SaleId: 2,
-            ClientId: 1,
-            ClientName: "Ron Wesly",
-            ProductName: "Candy"
-        }
-    ]);
+const Sale = require('../models/sales')
+
+// Returns all sales from database
+router.get('/', async (req, res) => {
+    const sales = await Sale.find();
+    res.json(sales);
 });
 
-router.get('/{SalesId}', (req, res) => { // pass argument to API
-    var SalesId;
-    if(SalesId === 1){
-        res.json({
-                ClientId: 1,
-                ClientName: "Harry Potter",
-                ProductName: "Wand"
-            });
-    } else if(SalesId === 2){
-        res.json({
-                ClientId: 1,
-                ClientName: "Harry Potter",
-                ProductName: "Wand"
-            });
-    } else {
-        // Return error 204 Sale not found.
-    }
+// Returns just one sale by ID from database
+router.get('/:id', async (req, res) => {
+    const sale = await Sale.findById(req.params.id);
+    res.json(sale);
+
 });
 
+// Add sales to database
+router.post('/', async (req, res) => {
+    const { saleID, clientID, clientName } = req.body;
+    const sale = new Sale({ saleID, clientID, clientName })
+    await sale.save()
+    res.json({status: 'Sale saved'});
+})
+
+// Update sales from database
+router.put('/:id', async (req, res) => {
+    const { saleID, clientID, clientName } = req.body;
+    const newSale = { saleID, clientID, clientName };
+    await Sale.findByIdAndUpdate(req.params.id, newSale);
+    res.json({status: 'Sale updated'});
+})
+
+// Delete sales from database
+router.delete('/:id', async (req, res) => {
+    await Sale.findByIdAndRemove(req.params.id);
+    res.json({status: 'Sale deleted'});
+})
 
 module.exports = router;
