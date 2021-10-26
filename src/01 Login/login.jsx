@@ -3,6 +3,8 @@ import './login.css';
 import Title from "./components/title/title";
 import Label from "./components/label/label";
 import Input from "./components/input/input";
+import Logi from './components/autentication/login.component';
+import Logi from './components/autentication/logout.component';
 
 const Login = () => {
     return (
@@ -29,11 +31,9 @@ const Login = () => {
                 Ingresar
             </button>
             <h6>Olvide mi contraseña</h6>
-            <button className="loginContainer_googleLogin">
-                <figure>
-                    <img src="/src/commons/google_logo.png" alt="Google logo"></img>
-                </figure>
-            </button>
+            <section>
+            {isInitialized && (isSignedIn ? <></> : <Logi />)}
+            </section>
             </div>
         </body>
         
